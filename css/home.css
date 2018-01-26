@@ -1,0 +1,30 @@
+html,body{
+  height: 100%;
+}
+
+main p, main h3{
+  text-align: inherit;
+}
+
+header{
+  background-image: url('../images/home_header_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding:0;
+  height: 100%;
+  margin-bottom: 5%;
+}
+
+article.flex{
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 746px){
+  main article{
+
+  }
+}

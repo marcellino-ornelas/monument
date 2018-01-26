@@ -1,0 +1,332 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clear-fix:after {
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-size: 15px;
+  line-height: 1.4;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color:#44545E;
+  text-align: center;
+}
+
+a, i{
+  text-decoration: none;
+  color: #7B98AA;
+}
+
+a:hover, i:hover{
+  color:#44545E;
+}
+
+i.fa{
+  font-size: 40px;
+  cursor: pointer;
+}
+
+img{
+  max-width: 100%;
+  max-height: 900px;
+}
+
+ul{
+  padding-left: 17px;
+}
+
+p,ul{
+  font-family: 'LATO',sans-serif;
+  font-weight: 400;
+}
+
+li {
+  list-style: initial;
+  overflow: initial;
+}
+
+p,ul,h2,h3,
+aside article{
+  text-align: initial;
+}
+
+textarea{
+  height: 100px;
+}
+
+h1{
+  font-size: 2em;
+}
+
+h2{
+  font-size: 1.7em
+}
+
+h3{
+  font-size: 1.5em;
+}
+
+h4{
+  font-size: 1.3em;
+}
+
+
+/******************************************
+/* LAYOUT for blog
+/*******************************************/
+
+header{
+  font-size: 25px;
+}
+
+/* nav */
+
+nav{
+  font-size: 1.5em
+}
+
+nav a{
+  display: inline-block;
+}
+
+.fill-space{
+  /*need to keep space for top of page*/
+  height: 50px;
+}
+
+/*header*/
+
+header{
+  padding: 7% 0;
+  color: white;
+}
+
+
+form{
+  width: 50%;
+  margin: auto;
+  font-size:1.5em;
+}
+
+form > div{
+  margin: 10px 0;
+}
+
+form input,
+form textarea,
+form button{
+  max-width: 100%;
+}
+
+form button:hover{
+  background-color: #f9f8f8;
+}
+
+/*footer*/
+
+footer{
+  background-color: #d1f3f6;
+}
+
+footer div{
+  padding: 2% 0;
+}
+
+footer > div{
+  border-bottom:1px solid black;
+}
+
+.contact button{
+  flex-grow: 0 !important;
+  flex-basis: 25% !important;
+}
+
+.contact button:first-child{
+  border-color:white;
+}
+
+.contact button:last-child{
+  flex-basis: 15% !important;
+  background-color: transparent;
+}
+
+.contact button:last-child:hover{
+  background-color: grey;
+}
+
+/******************************************
+/* LAYOUT for index
+/*******************************************/
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.container{
+  padding-right:1%;
+  padding-left: 1%;
+}
+
+/* flex */
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex.center{
+  justify-content: center;
+}
+
+.flex .flex-full{
+  flex:1 1 auto;
+}
+
+.only-mobile{
+  display: none;
+}
+
+.only-desktop{
+  display: initial;
+}
+
+/* buttons */
+.btn{
+  padding: 0.5em;
+  background-color: white;
+  border:1px solid black;
+  cursor: pointer;
+}
+
+/* images */
+.full-img{
+  width: 100%;
+}
+
+/* text */
+
+.txt-center{
+  text-align: center;
+}
+
+/* growing */
+.full{
+  width: 100%;
+}
+
+/*sparate block level elements*/
+
+.space-out{
+  /*padding-top:2%;*/
+  padding-bottom: 2%;
+}
+
+/* separate inline elements*/
+.separate-block > *,
+.separate{
+  margin-right: 10px;
+}
+
+.separate-block > *:nth-last-child(1),
+.separate:nth-last-child(1){
+  margin-right:0;
+}
+
+.stick-nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 1% 5%;
+  border-bottom:1px solid black;
+}
+
+.vertical-align{
+  justify-content: center;
+  align-items: center;
+}
+
+
+/******************************************
+/* media querys
+/*******************************************/
+@media screen and (max-width: 768px) {
+
+  /* flex */
+  .flex:not(.flex-no-break){
+    flex-direction: column;
+  }
+  .flex.center:not(.flex-no-break):not(.contact){
+    justify-content: initial;
+    align-items: center;
+  }
+
+  .only-mobile{
+    display: initial;
+  }
+  .only-desktop{
+    display: none;
+  }
+
+  form{
+    width: 80%;
+  }
+
+  form .space-out{
+    padding: 0;
+  }
+
+  form .separate-block input,
+  footer .separate-block button{
+    margin-right: 0;
+  }
+
+  .contact{
+    width: 80%;
+    margin:auto;
+  }
+
+  form input:first-of-type{
+    margin-bottom: 10px;
+  }
+
+  nav{
+    text-align: initial;
+  }
+
+  img{
+    max-height: 500px;
+  }
+
+  .contact button:first-child{
+    margin-bottom: 10px;
+  }
+}
