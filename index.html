@@ -17,16 +17,16 @@
   <nav class="fill-space">
     <div class="stick-nav">
       <i class="fa fa-bars only-mobile"></i>
-      <div class="hover-section flex only-desktop container separate-block">
-        <a href="#">ABOUT</a>
-        <a href="#">GALLERY</a>
-        <a href="#">BLOG</a>
-        <a href="#">CONTACT</a>
+      <div class="flex only-desktop container separate-block nav-bar">
+        <a href="#about">ABOUT</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="blog.html">BLOG</a>
+        <a href="#contact">CONTACT</a>
       </div>
     </div>
   </nav>
 
-  <header class="flex vertical-align">
+  <header class="flex vertical-align flex-no-break">
     <div>
       <h1>MONUMENT</h1>
       <h2 class="txt-center"> A LIFESTYLE MAGAZINE</h2>
@@ -34,10 +34,10 @@
   </header>
 
 
-  <main class="txt-center">
+  <main class="txt-center space-out">
     <h3>FROM THE ARCHIVE</h3>
-    <div class="flex flex-full container">
-      <article class="container space-out flex">
+    <section class="flex flex-full container space-out">
+      <article class="container flex">
         <img src="images/article_1.jpg" alt="This is a picture of a article">
         <h4>ISSUE TWENTY - THE SOUTHWEST </h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -47,11 +47,11 @@
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
         <div>
-          <button class="btn"> Read More</button>
+          <button class="btn darken-white"> Read More</button>
         </div>
       </article>
 
-      <article class="container space-out flex">
+      <article class="container flex">
         <img src="images/article_2.jpg" alt="This is a picture of a article">
         <h4>ISSUE NINTEEN - CAMPING</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -61,11 +61,11 @@
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div>
-          <button class="btn"> Read More</button>
+          <button class="btn darken-white"> Read More</button>
         </div>
       </article>
 
-      <article class="container space-out flex">
+      <article class="container flex">
         <img src="images/article_3.jpg" alt="This is a picture of a article">
         <h4>ISSUE EIGHTEEN - FOOD</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -75,27 +75,74 @@
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div>
-          <button class="btn"> Read More</button>
+          <button class="btn darken-white"> Read More</button>
         </div>
       </article>
-    </div>
+    </section>
 
+    <section id="about" class="flex-no-break container space-out">
+      <div>
+        <h2>ABOUT THE MAGAZINE</h2>
+        <h3>A LIFESTYLE MAGAZINE CRAFTED WITH LOVE</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </section>
 
+    <section id="gallery">
+      <!-- <div class="flex">
+
+        <section class="container">
+          <img src="images/gallery_1.jpg" alt="THIS IS A PICTURE OF ">
+          <img src="images/gallery_3.jpg" alt="THIS IS A PICTURE OF ">
+        </section>
+
+        <section class="container">
+          <img src="images/gallery_4.jpg" alt="THIS IS A PICTURE OF ">
+          <img src="images/gallery_2.jpg" alt="THIS IS A PICTURE OF ">
+        </section>
+
+        <section class="container">
+          <img src="images/gallery_5.jpg" alt="THIS IS A PICTURE OF ">
+          <img src="images/gallery_6.jpg" alt="THIS IS A PICTURE OF ">
+        </section>
+
+      </div> -->
+      <div class="masonery container">
+          <img src="images/gallery_1.jpg" alt="THIS IS A PICTURE OF ">
+          <img src="images/gallery_3.jpg" alt="THIS IS A PICTURE OF ">
+
+          <img src="images/gallery_4.jpg" alt="THIS IS A PICTURE OF ">
+          <img src="images/gallery_2.jpg" alt="THIS IS A PICTURE OF ">
+          <img src="images/gallery_5.jpg" alt="THIS IS A PICTURE OF ">
+          <img src="images/gallery_6.jpg" alt="THIS IS A PICTURE OF ">
+      </div>
+    </section>
   </main>
 
 
-  <section class="container space-out">
+  <section id="contact" class="container space-out">
     <h2 class="txt-center">Get In Touch</h2>
-    <form action="/email" method="POST">
+    <form action="/contact" method="POST">
       <div class="flex separate-block ">
-        <input type="text" placeholder="Name" name="name" class="flex-full">
-        <input type="text" placeholder="Email" name="email" class="flex-full">
+        <input type="text" placeholder="Full Name" name="fullname" class="flex-full">
+        <input type="email" placeholder="Email" name="email" class="flex-full">
+        <input type="text" placeholder="Subject" name="subject" class="flex-full">
+      </div>
+      <div>
+        <textarea class="full" name="message" placeholder="Message"></textarea>
       </div>
       <div class="">
-        <textarea class="full" name="description" placeholder="Description"></textarea>
-      </div>
-      <div class="">
-        <button type="button" class="btn full"> Submit </button>
+        <button type="button" class="btn full darken-white"> Submit </button>
       </div>
     </form>
   </section>
@@ -103,14 +150,16 @@
 
   <footer>
     <div>
-      <nav class="hover-section flex center flex-no-break separate-block">
-        <a href="#"><i class="fa fa-instagram"></i> </a>
-        <a href="#"><i class="fa fa-twitter"></i> </a>
-        <a href="#"><i class="fa fa-facebook-official"></i> </a>
-      </nav>
+        <nav>
+          <div class="flex center flex-no-break separate-block nav-bar">
+            <a href="#"><i class="fa fa-instagram"></i> </a>
+            <a href="#"><i class="fa fa-twitter"></i> </a>
+            <a href="#"><i class="fa fa-facebook-official"></i> </a>
+          </div>
+        </nav>
       <div class="flex contact container separate-block center">
-        <button class="btn flex-full">EMAIL ADDRESS</button>
-        <button class="btn flex-full">KEEP IN TOUCH</button>
+        <button class="btn flex-full darken-white">EMAIL ADDRESS</button>
+        <button class="btn flex-full">Subscribe</button>
       </div>
     </div>
     <p class="txt-center">©2016 Sarah Holden</p>

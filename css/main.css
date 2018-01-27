@@ -23,7 +23,7 @@ Developer @GA in NYC
     display: table; /* 2 */
 }
 
-.clear-fix:after {
+.clearfix:after {
     clear: both;
 }
 
@@ -63,7 +63,7 @@ ul{
   padding-left: 17px;
 }
 
-p,ul{
+p{
   font-family: 'LATO',sans-serif;
   font-weight: 400;
 }
@@ -113,8 +113,10 @@ nav{
   font-size: 1.5em
 }
 
-nav a{
-  display: inline-block;
+
+.flex.nav-bar a{
+  flex: 1 1 auto;
+  /*display: inline-block;*/
 }
 
 .fill-space{
@@ -129,9 +131,8 @@ header{
   color: white;
 }
 
-
 form{
-  width: 50%;
+  width: 90%;
   margin: auto;
   font-size:1.5em;
 }
@@ -144,11 +145,13 @@ form input,
 form textarea,
 form button{
   max-width: 100%;
+  border: 1px solid black;
+  padding:1%;
 }
 
-form button:hover{
+/*form button:hover{
   background-color: #f9f8f8;
-}
+}*/
 
 /*footer*/
 
@@ -156,12 +159,19 @@ footer{
   background-color: #d1f3f6;
 }
 
+footer nav{
+  width: 50%;
+  margin: auto;
+}
 footer div{
   padding: 2% 0;
 }
 
 footer > div{
   border-bottom:1px solid black;
+}
+footer p{
+  margin-bottom: 0;
 }
 
 .contact button{
@@ -181,10 +191,6 @@ footer > div{
 .contact button:last-child:hover{
   background-color: grey;
 }
-
-/******************************************
-/* LAYOUT for index
-/*******************************************/
 
 
 /******************************************
@@ -214,16 +220,16 @@ footer > div{
   display: none;
 }
 
-.only-desktop{
-  display: initial;
-}
-
 /* buttons */
 .btn{
   padding: 0.5em;
   background-color: white;
   border:1px solid black;
   cursor: pointer;
+}
+
+.btn.darken-white:hover{
+  background-color: #f9f8f8;
 }
 
 /* images */
@@ -275,6 +281,27 @@ footer > div{
 }
 
 
+/*
+ * Help from https://css-tricks.com/seamless-responsive-photo-grid/
+*/
+.masonery {
+  /* Prevent vertical gaps */
+
+  -webkit-column-count: 3;
+  -webkit-column-gap:   10px;
+  -moz-column-count:    3;
+  -moz-column-gap:      10px;
+  column-count:         3;
+  column-gap:           10px;
+}
+
+.masonery img {
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 10px;
+}
+
+
 /******************************************
 /* media querys
 /*******************************************/
@@ -296,6 +323,7 @@ footer > div{
     display: none;
   }
 
+
   form{
     width: 80%;
   }
@@ -314,7 +342,7 @@ footer > div{
     margin:auto;
   }
 
-  form input:first-of-type{
+  form input:nth-last-child(1n+2){
     margin-bottom: 10px;
   }
 
@@ -328,5 +356,11 @@ footer > div{
 
   .contact button:first-child{
     margin-bottom: 10px;
+  }
+
+  .masonery{
+    -webkit-column-count: 2;
+    -moz-column-count:    2;
+    column-count:         2;
   }
 }
