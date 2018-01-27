@@ -1,10 +1,3 @@
-/*
-Project Name: Blank Template
-Client: Your Client
-Author: Your Name
-Developer @GA in NYC
-*/
-
 
 /******************************************
 /* SETUP
@@ -82,22 +75,10 @@ textarea{
   height: 100px;
 }
 
-h1{
-  font-size: 2em;
-}
-
-h2{
-  font-size: 1.7em
-}
-
-h3{
-  font-size: 1.5em;
-}
-
-h4{
-  font-size: 1.3em;
-}
-
+h1{ font-size: 2em;   }
+h2{ font-size: 1.7em; }
+h3{ font-size: 1.5em; }
+h4{ font-size: 1.3em; }
 
 /******************************************
 /* LAYOUT for blog
@@ -108,15 +89,10 @@ header{
 }
 
 /* nav */
-
-nav{
-  font-size: 1.5em
-}
-
+nav{ font-size: 1.5em; }
 
 .flex.nav-bar a{
   flex: 1 1 auto;
-  /*display: inline-block;*/
 }
 
 .fill-space{
@@ -125,7 +101,6 @@ nav{
 }
 
 /*header*/
-
 header{
   padding: 7% 0;
   color: white;
@@ -149,12 +124,7 @@ form button{
   padding:1%;
 }
 
-/*form button:hover{
-  background-color: #f9f8f8;
-}*/
-
 /*footer*/
-
 footer{
   background-color: #d1f3f6;
 }
@@ -251,7 +221,6 @@ footer p{
 /*sparate block level elements*/
 
 .space-out{
-  /*padding-top:2%;*/
   padding-bottom: 2%;
 }
 
@@ -306,7 +275,6 @@ footer p{
 /* media querys
 /*******************************************/
 @media screen and (max-width: 768px) {
-
   /* flex */
   .flex:not(.flex-no-break){
     flex-direction: column;
@@ -323,13 +291,16 @@ footer p{
     display: none;
   }
 
-
   form{
     width: 80%;
   }
 
   form .space-out{
     padding: 0;
+  }
+
+  form input:nth-last-child(1n+2){
+    margin-bottom: 10px;
   }
 
   form .separate-block input,
@@ -340,10 +311,6 @@ footer p{
   .contact{
     width: 80%;
     margin:auto;
-  }
-
-  form input:nth-last-child(1n+2){
-    margin-bottom: 10px;
   }
 
   nav{
